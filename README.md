@@ -3,6 +3,7 @@
 Twitter: [@stevebargelt](http://www.twitter.com/stevebargelt)
 
 
+
 ### just notes to myself...
 
 ARMv7hf
