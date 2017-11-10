@@ -14,6 +14,7 @@ RUN \
   chmod +x /bin/vault &&\
   rm /tmp/vault.zip &&\
   apk update &&\
+  apk install git &&\
   apk add ca-certificates
 
 EXPOSE 8200
