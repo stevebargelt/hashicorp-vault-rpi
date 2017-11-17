@@ -2,7 +2,48 @@
 
 Twitter: [@stevebargelt](http://www.twitter.com/stevebargelt)
 
+### Config File
 
+### Config File
+
+```
+```
+
+### Docker Run
+
+```
+docker run \
+    --rm \
+    --name vault-dev \
+    --memory-swap -1 \
+    -d \
+    -v "vault.hcl:/etc/vault.hcl" \
+    -p 8200:8200 \
+    stevebargelt/hashicorp-vault-rpi -dev
+```
+
+Connect to the container:
+
+```
+docker exec -it vault-dev /bin/sh
+```
+
+```
+export VAULT_ADDR=http://127.0.0.1:8200
+```
+
+```
+vault status
+```
+
+```
+exit
+```
+
+```
+alias vault='docker exec -it vault-dev vault "$@"'
+export VAULT_ADDR=http://127.0.0.1:8200
+```
 
 ### just notes to myself...
 
